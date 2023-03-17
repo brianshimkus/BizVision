@@ -24,7 +24,7 @@ import {
 	useTheme,
 } from '@mui/material'
 
-export default function Navbar() {
+export default function Navbar({ isSidebarOpen, setIsSidebarOpen }) {
 	const dispatch = useDispatch()
 	const theme = useTheme()
 
