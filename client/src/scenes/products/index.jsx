@@ -98,7 +98,32 @@ export default function Products() {
 					columnGap='1.33%'
 					sx={{
 						'& > div': { gridColumn: isNonMobile ? undefined : 'span 4' },
-					}}></Box>
+					}}>
+					{data.map(
+						({
+							_id,
+							name,
+							description,
+							price,
+							rating,
+							category,
+							supply,
+							stat,
+						}) => (
+							<Product
+								key={_id}
+								_id={_id}
+								name={name}
+								description={description}
+								price={price}
+								rating={rating}
+								category={category}
+								supply={supply}
+								stat={stat}
+							/>
+						)
+					)}
+				</Box>
 			) : (
 				<>Loading...</>
 			)}
