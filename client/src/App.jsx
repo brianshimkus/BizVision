@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material/styles'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import Products from './scenes/products'
 import Dashboard from './scenes/dashboard'
 import Layout from './scenes/layout'
 import { themeSettings } from './theme'
@@ -19,6 +20,7 @@ export default function App() {
 						<Route element={<Layout />}>
 							<Route path='/' element={<Navigate to='/dashboard' replace />} />
 							<Route path='/dashboard' element={<Dashboard />} />
+							<Route path='/products' element={<Products />} />
 						</Route>
 					</Routes>
 				</ThemeProvider>
