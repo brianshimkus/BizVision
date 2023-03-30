@@ -9,6 +9,7 @@ import Layout from './scenes/layout'
 import { themeSettings } from './theme'
 import Customers from './scenes/customers'
 import Transactions from './scenes/transactions'
+import Geography from './scenes/geography'
 
 export default function App() {
 	const mode = useSelector((state) => state.global.mode)
@@ -25,6 +26,7 @@ export default function App() {
 							<Route path='/products' element={<Products />} />
 							<Route path='/customers' element={<Customers />} />
 							<Route path='/transactions' element={<Transactions />} />
+							<Route path='/geography' element={<Geography />} />
 						</Route>
 					</Routes>
 				</ThemeProvider>
